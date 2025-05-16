@@ -1,0 +1,209 @@
+/* Harry Potter Theme for Todo App */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Cormorant+Garamond:wght@400;600&display=swap');
+
+body {
+  font-family: 'Cormorant Garamond', serif;
+  background-color: #0e1a2d;
+  background-image: url('https://cdnjs.cloudflare.com/ajax/libs/simple-icons/3.0.1/simple-icons.svg'); /* Using as a subtle pattern */
+  background-blend-mode: soft-light;
+  margin: 0;
+  padding: 20px;
+  color: #d3a625; /* Hufflepuff gold */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  letter-spacing: 0.5px;
+}
+
+h1 {
+  font-family: 'Cinzel', serif;
+  color: #d3a625; /* Hufflepuff gold */
+  margin-top: 40px;
+  font-size: 2.8rem;
+  text-shadow: 0 0 10px rgba(211, 166, 37, 0.5);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+h1::before, h1::after {
+  content: "⚡";
+  margin: 0 15px;
+  font-size: 1.8rem;
+  vertical-align: middle;
+}
+
+input {
+  padding: 14px 18px;
+  border: 2px solid #946b2d;
+  border-radius: 0;
+  background-color: rgba(20, 20, 20, 0.7);
+  color: #d3a625;
+  width: 300px;
+  font-size: 18px;
+  margin-right: 10px;
+  outline: none;
+  transition: all 0.3s ease;
+  font-family: 'Cormorant Garamond', serif;
+  box-shadow: 0 0 15px rgba(211, 166, 37, 0.2);
+}
+
+input::placeholder {
+  color: rgba(211, 166, 37, 0.6);
+}
+
+input:focus {
+  box-shadow: 0 0 15px rgba(211, 166, 37, 0.5);
+  border-color: #d3a625;
+}
+
+button {
+  padding: 12px 24px;
+  background-color: #740001; /* Gryffindor red */
+  color: #d3a625;
+  border: 2px solid #946b2d;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: 'Cinzel', serif;
+  transition: all 0.3s ease;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+}
+
+button:hover {
+  background-color: #ae0001;
+  transform: translateY(-2px);
+  box-shadow: 0 0 20px rgba(211, 166, 37, 0.4);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+button::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -60%;
+  width: 20px;
+  height: 200%;
+  background: rgba(255, 255, 255, 0.1);
+  transform: rotate(30deg);
+  transition: all 0.6s ease;
+}
+
+button:hover::after {
+  left: 120%;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 40px;
+  width: 450px;
+}
+
+li {
+  background-color: rgba(21, 35, 56, 0.8); /* Dark Ravenclaw blue */
+  border: 1px solid #946b2d;
+  padding: 18px 22px;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  animation: appear 0.7s ease;
+  transition: all 0.3s ease;
+  font-size: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  color: #eeba30;
+  position: relative;
+  overflow: hidden;
+}
+
+li::before {
+  content: "✦";
+  margin-right: 10px;
+  color: #d3a625;
+}
+
+li:hover {
+  transform: translateY(-3px) rotate(0.5deg);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  border-color: #d3a625;
+}
+
+.delete {
+  background-color: #1a472a; /* Slytherin green */
+  color: #d3a625;
+  border: 1px solid #946b2d;
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-left: 10px;
+  font-family: 'Cinzel', serif;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 1;
+  min-width: 80px;
+  text-align: center;
+}
+
+.delete:hover {
+  background-color: #2a623d;
+  color: #eeba30;
+  border-color: #d3a625;
+  box-shadow: 0 0 15px rgba(211, 166, 37, 0.3);
+}
+
+/* Animations */
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(20px) rotate(-2deg);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) rotate(0);
+  }
+}
+
+/* Scroll bar styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0e1a2d;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #946b2d;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #d3a625;
+}
+
+/* Layout adjustments */
+body > * {
+  width: 450px;
+}
+
+body > input, 
+body > button {
+  display: inline-block;
+  margin-top: 25px;
+}
+
+body > input {
+  width: 320px;
+}
+
+body > button {
+  width: auto;
+}
