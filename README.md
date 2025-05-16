@@ -33,7 +33,8 @@ Write your tasks like you're penning them in the Room of Requirement, and cast t
 
 ## 📸 Preview
 
-![image](https://github.com/user-attachments/assets/56470f69-f0a8-40c7-9377-098213e473ff)
+![todoapp-ezgif com-video-to-gif-converter (1)](https://github.com/user-attachments/assets/b82e14ec-e295-4d23-bf91-4950feeca551)
+
 
 ---
 
